@@ -1,0 +1,255 @@
+/* ******************************************************
+ *
+ *   Comprehensive Map Gallery using leaflet - style css
+ *
+ *   Author: Luyu Liu 
+ *   Contact: liu.6544@osu.edu
+ *   Update Date:2017.10.04
+ *
+ * ******************************************************* */
+
+//------------------------------------methods------------------------------------
+#container {
+  height: 100%;
+  width: 100%
+}
+
+#map {
+  height: 100%;
+  1position: absolute;
+  1top: 0;
+  1bottom: 0;
+  1right: 0;
+  1left: 0;
+}
+
+#info-pane {
+  position: absolute;
+  top: 10px;
+  right: 200px;
+  z-index: 10;
+  padding: 1em;
+  background: white;
+}
+
+#title {
+  position: absolute;
+  top: 10px;
+  right: 350px;
+  z-index: 100;
+  1float: right;
+  padding-left: 15px;
+  padding-right: 15px;
+  border: solid 1px;
+  background: rgba(255, 255, 255, 0.56);
+}
+
+#sidebar {
+  width: 250px;
+}
+
+.list-complete-item {
+  padding: 4px;
+  margin-top: 4px;
+  border: solid 1px;
+  transition: all 1s;
+}
+
+.list-complete-enter,
+.list-complete-leave-active {
+  opacity: 0;
+}
+
+.glyphicon glyphicon-list {
+  font-size: 75px;
+}
+
+.mini-submenu {
+  margin-top: 30px;
+  margin-left: 40px;
+  display: none;
+  background-color: white;
+  border: 0px solid rgba(0, 0, 0, 0.9);
+  border-radius: 4px;
+  padding: 9px;
+  position: absolute;
+  z-index: 900;
+  width: 42px;
+  box-shadow: 2px 2px 5px gray;
+}
+
+.mini-submenu:hover {
+  cursor: pointer;
+}
+
+.mini-submenu .icon-bar {
+  border-radius: 1px;
+  display: block;
+  height: 2px;
+  width: 22px;
+  margin-top: 3px;
+}
+
+.mini-submenu .icon-bar {
+  background-color: #000;
+}
+
+.panel-heading .accordion-toggle:after {
+  /* symbol for "opening" panels */
+  font-family: 'Glyphicons Halflings';
+  /* essential for enabling glyphicon */
+  content: "\e114";
+  /* adjust as needed, taken from bootstrap.css */
+  float: right;
+  /* adjust as needed */
+  color: grey;
+  /* adjust as needed */
+}
+
+.panel-heading .accordion-toggle.collapsed:after {
+  /* symbol for "collapsed" panels */
+  content: "\e080";
+  /* adjust as needed, taken from bootstrap.css */
+}
+
+.panel-heading {
+  width: 250px;
+}
+
+.panel-body {
+  width: 250px;
+}
+
+.accordion-wrapper {
+  display: block;
+  height: 350px;
+  max-height: 100%;
+}
+
+#accordion {
+  max-width: 36.125rem;
+  margin-left: 15px;
+}
+
+.panel-group {
+  -webkit-backface-visibility: hidden;
+}
+
+.panel-body {
+  -webkit-backface-visibility: hidden;
+}
+
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -1px;
+}
+
+#map .leaflet-popup-content-wrapper {
+  background: #2c3e50;
+  color: #fff;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+#map .leaflet-popup-content-wrapper a {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+#map .leaflet-popup-tip-container {
+  width: 0px;
+  height: 0px;
+}
+
+#map .leaflet-popup-tip {
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid #2c3e50;
+}
+
+.info {
+  padding: 6px 8px;
+  font: 16px/18px Arial, Helvetica, sans-serif;
+  background: white;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.info h4 {
+  margin: 0 0 5px;
+  color: #777;
+}
+
+.legend {
+  line-height: 18px;
+  color: #555;
+}
+
+.legend i {
+  float: left;
+  margin-right: 8px;
+  opacity: 0.7;
+}
+
+.legendbox {
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgba(0, 0, 0, .2);
+}
+
+.tablehead {
+  height: 26px;
+}
+
+.legendcontent {
+  width: 110px;
+}
+
+.aq-color-1 {
+  color: #00E400;
+}
+
+.aq-color-2 {
+  color: #FFFF00;
+}
+
+.aq-color-3 {
+  color: #FF7E00;
+}
+
+.aq-color-4 {
+  color: #FF0000;
+}
+
+.aq-color-5 {
+  color: #8F3F97;
+}
+
+.aq-color-6 {
+  color: #7E0023;
+}
+
+.cota-color-1 {
+  color: #253494
+}
+
+.cota-color-2 {
+  color: #2c7fb8
+}
+
+.cota-color-3 {
+  color: #41b6c4
+}
+
+.cota-color-4 {
+  color: #a1dab4
+}
+
+.cota-color-5 {
+  color: #ffffcc
+}

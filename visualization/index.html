@@ -1,0 +1,198 @@
+<html>
+
+<head>
+	<title>Scooter Brother</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="theme-color" content="#000000">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<link rel="shortcut icon" href="./img/favicon.ico">
+	<!-- Libraries-->
+	<!-- Load Leaflet from -->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+		integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+		crossorigin="" />
+	<script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+		integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+		crossorigin=""></script>
+	<!-- Load Esri Leaflet -->
+	<script src="./js/esri-leaflet.js"></script>
+	<!-- Load jquery -->
+	<script src="./js/jquery-3.2.1.min.js"></script>
+
+	<!-- Load Bootstrap -->
+	<script src="./js/bootstrap.min.js"></script>
+
+	<!-- awesomemarkers -->
+	<script src="./js/leaflet.awesome-markers.min.js"></script>
+
+	<!-- cluster -->
+	<script src="./js/leaflet.markercluster.js"></script>
+
+	<!-- Load css-->
+	<link rel="stylesheet" href="./css/leaflet.awesome-markers.css">
+	<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">
+	<link rel="stylesheet" href="./css/bootstrap.css">
+	<link rel="stylesheet" href="./css/leaflet.css">
+	<link rel="stylesheet" href="./css/bootleaf.css">
+	<link rel="stylesheet" href="./css/MarkerCluster.css">
+	<link rel="stylesheet" href="./css/MarkerCluster.Default.css">
+
+</head>
+
+<body>
+	<div id="container">
+		<!-- navigation bar -->
+		<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+			<div class="container-fluid">
+
+				<div class="navbar-header" id="mapheader">
+					<a class="navbar-brand mapheader" id="about-btn" href="#">Reliability Map</a>
+				</div>
+				<div class="navbar-collapse collapse">
+
+				</div>
+				<!--/.navbar-collapse -->
+			</div>
+		</div>
+		<div id="sidebar">
+			<div class="sidebar-wrapper">
+
+				<div class="panel-group" id="accordion1" role="tablist" aria-multiselectable="true">
+					<div class="panel panel-default" style="margin:0">
+						<div class="panel-heading" role="tab" id="headingOne0" style="margin:0">
+							<a class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#collapseOne0"
+								aria-expanded="true" aria-controls="collapseOne0">COTA access
+								<button type="button" class="btn btn-xs btn-default pull-right"
+									title="Click to hide sidebar" id="sidebar-hide-btn">
+									<i class="fa fa-chevron-left"></i>
+								</button>
+							</a>
+						</div>
+
+
+					</div>
+					<div id="collapseOne0" class="panel-collapse collapse in" role="tabpanel"
+						aria-labelledby="headingOne0" style="margin:0">
+						<div class="panel-body">
+							<!-- <form method="get">
+								Date:
+								<input type="date" id="cota-date-input" />
+							</form>
+							<form method="get">
+								Timestamp:
+								<input type="text" id="cota-time-input" /><button id="cota-add-btn" type="button"
+									class="btn btn-primary btn">+</button>
+							</form> -->
+
+							<select id="stop-select">
+								<option>Select a stop</option>
+							</select></br>
+
+
+
+							<!-- <button id="scooter-btn" type="button" class="btn btn-primary btn">With Scooter</button>
+							<button id="normal-btn" type="button" class="btn btn-primary btn">Without Scooter</button> -->
+
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" value="" id="scooter-checkbox">
+								<label class="form-check-label" for="scooter-checkbox">
+									scooter-checkbox
+								</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" value="" id="normal-checkbox">
+								<label class="form-check-label" for="normal-checkboxs">
+									normal-checkbox
+								</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" value="" id="scooterlocation-checkbox">
+								<label class="form-check-label" for="normal-checkboxs">
+									scooterlocation-checkbox
+								</label>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+				<div class="panel-group" id="accordion1" role="tablist" aria-multiselectable="true">
+					<div class="panel panel-default" style="margin:0">
+						<div class="panel-heading" role="tab" id="headingOne0" style="margin:0">
+							<a class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#collapseOne0"
+								aria-expanded="true" aria-controls="collapseOne0">Search stop
+								<button type="button" class="btn btn-xs btn-default pull-right"
+									title="Click to hide sidebar" id="sidebar-hide-btn">
+									<i class="fa fa-chevron-left"></i>
+								</button>
+							</a>
+						</div>
+
+
+					</div>
+					<div id="collapseOne0" class="panel-collapse collapse in" role="tabpanel"
+						aria-labelledby="headingOne0" style="margin:0">
+						<div class="panel-body">
+							<label for="fname">Stop:</label>
+							<input type="text" id="stop-input" name="fname" value="3RDMAIS"><br><br>
+							<label for="fname">Budget:</label>
+							<input type="text" id="budget-input" name="fname" value="30"><br><br>
+							<input type="checkbox" id="RT-checkbox" name="RT-checkbox" checked>
+							<label for="RT-checkbox"> Realtime</label><br>
+							<input type="checkbox" id="SC-checkbox" name="SC-checkbox" checked>
+							<label for="SC-checkbox"> Schedule</label><br>
+							<button type="button" id="show-travel-time-button">Show travel time</button>
+							<button type="button" id="stp-button">Show STP</button>
+						</div>
+					</div>
+					<div id="collapseOne0" class="panel-collapse collapse in" role="tabpanel"
+						aria-labelledby="headingOne0" style="margin:0">
+						<div class="panel-body">
+							<label for="fname">Start stop:</label></br>
+							<input type="text" id="start-stop-input" name="fname" value="3RDMAIS"><br><br>
+							<label for="fname">End stop:</label></br>
+							<input type="text" id="end-stop-input" name="fname" value="KARPAUN"><br><br>
+							<button type="button" id="show-tragectory-button">Show tragectory</button>
+							<button type="button" id="show-WATT-button">Show WATT</button>
+						</div>
+					</div>
+				</div>
+
+
+
+			</div>
+		</div>
+
+		<div class="mini-submenu" title="Expand the map control">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</div>
+
+		<div id="map">
+
+			<div id="loading" style="display: none;">
+				<div class="loading-indicator">
+					<div class="progress progress-striped active">
+						<div class="progress-bar progress-bar-info progress-bar-full"></div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+	<!-- main.js -->
+	<script src="./script/main.js"></script>
+	<link rel="stylesheet" href="./script/style.css">
+
+</body>
+
+</html>
