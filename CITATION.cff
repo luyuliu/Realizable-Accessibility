@@ -18,6 +18,7 @@ url: "https://link.springer.com/article/10.1007/s10109-022-00382-w"
 license: MIT
 preferred-citation:
   type: article
+  authors:
   - family-names: "Liu"
     given-names: "Luyu"
     orcid: "https://orcid.org/0000-0002-6684-5570"
