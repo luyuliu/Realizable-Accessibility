@@ -16,3 +16,18 @@ doi: https://doi.org/10.1007/s10109-022-00382-w
 date-released: 2022-5-20
 url: "https://link.springer.com/article/10.1007/s10109-022-00382-w"
 license: MIT
+preferred-citation:
+  type: article
+  - family-names: "Liu"
+    given-names: "Luyu"
+    orcid: "https://orcid.org/0000-0002-6684-5570"
+  - family-names: "Porr"
+    given-names: "Adam A."
+    orcid: "https://orcid.org/0000-0002-4776-5575"
+  - family-names: "Miller"
+    given-names: "Harvey J."
+    orcid: "https://orcid.org/0000-0001-5480-3421"
+title: "Realizable accessibility: evaluating the reliability of public transit accessibility using high‑resolution real‑time data"
+  doi: https://doi.org/10.1007/s10109-022-00382-w
+  year: 2022
+  url: "https://link.springer.com/article/10.1007/s10109-022-00382-w"
